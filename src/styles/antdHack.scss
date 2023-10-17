@@ -1,0 +1,38 @@
+/*
+ * @Author: 王欣磊
+ * @Date: 2021-06-07 11:30:18
+ * @LastEditors: 王欣磊
+ * @LastEditTime: 2022-05-18 11:48:18
+ * @Description: ant组件样式hack
+ * @FilePath: /bianjian-ship/src/styles/antdHack.scss
+ */
+.ant-hack {
+  .ant-table-thead > tr {
+    background: #f4f7fd !important;
+  }
+
+  .ant-table-thead > tr > th {
+    background: transparent !important;
+  }
+
+  .ant-table-row {
+    td {
+      font-size: 14px;
+
+      color: #5d6e88;
+    }
+  }
+}
+
+.ant-btn-success {
+  color: #fff;
+  border-color: #237804;
+  background-color: #237804;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    border-color: #2a9206;
+    background-color: #2a9206;
+  }
+}

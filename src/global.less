@@ -1,0 +1,163 @@
+@import '~ant-design-vue/es/style/themes/default.less';
+
+@font-face {
+  font-family: 'Alibaba PuHuiTi';
+  font-weight: normal;
+  font-style: normal;
+
+  src: url('./assets/fonts/AlibabaPuHuiTi-2-55-Regular.ttf') format('truetype'); /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+}
+
+body,
+html,
+#root {
+  font-family: 'Alibaba PuHuiTi', Helvetica, Tahoma, Arial, 'Microsoft YaHei', 'Hiragino Sans GB',
+    'WenQuanYi Micro Hei', sans-serif;
+
+  position: relative;
+
+  height: 100%;
+}
+
+#app {
+  // height: 100%
+}
+
+#luckysheet-icon-textwrap-menu-menuButton {
+  overflow: hidden;
+}
+
+// sheet渲染hack
+.luckysheet-loading-mask {
+  z-index: 2;
+}
+
+.luckysheet-loading-image .image-type {
+  background-image: url('/library/onlinesheet/css/loading.gif') !important;
+}
+
+.cross {
+  display: inline-block;
+}
+
+.cross::before {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  box-sizing: border-box;
+  width: 21px;
+  height: 10px;
+
+  content: '';
+  transform: rotateZ(45deg) scale(1.414);
+  transform-origin: bottom center;
+
+  border-bottom: 2px solid #ffff;
+  border-radius: 1px;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout.layout-basic {
+  height: 100vh;
+  min-height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+// 数据列表 样式
+.table-alert {
+  margin-bottom: 16px;
+}
+
+// 数据列表 操作
+.table-operator {
+  margin-bottom: 18px;
+
+  button {
+    margin-right: 8px;
+  }
+}
+
+// 数据列表 搜索条件
+.table-page-search-wrapper {
+  .ant-form-inline {
+    .ant-form-item {
+      display: flex;
+
+      margin-right: 0;
+      margin-bottom: 24px;
+
+      .ant-form-item-control-wrapper {
+        display: inline-block;
+        flex: 1 1;
+
+        vertical-align: middle;
+      }
+
+      > .ant-form-item-label {
+        line-height: 32px;
+
+        width: auto;
+        padding-right: 8px;
+      }
+
+      .ant-form-item-control {
+        line-height: 32px;
+
+        height: 32px;
+      }
+    }
+  }
+
+  .table-page-search-submitButtons {
+    display: block;
+
+    margin-bottom: 24px;
+
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    overflow-x: auto;
+
+    width: 100%;
+
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// 最小宽度
+@media screen and(max-width: 1280px) {
+  .blank-outer {
+    width: 1280px !important;
+  }
+}
